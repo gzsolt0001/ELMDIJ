@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WebUIModel csempeMod="MENU" id="ELMDIJ" info="Bevallás élelmiszerlánc felügyeleti díjról" mainDocumentId="ELMDIJ" major="7" minor="0" mukodesiMod="NORMAL" name="ELMDIJ" templateType="single" tipus="BEVALLAS" webDefaultLength="4" webInfo="Bevallás élelmiszerlánc felügyeleti díjról" webName="ELMDIJ" webOnell="false">
+    <Form id="ELMDIJ" name="ELMDIJ" webDefaultLength="4" webInfo="Bevallás élelmiszerlánc felügyeleti díjról" webName="ELMDIJ">
+        <Assistants>
+            <AssistantItem id="ROOT_ASSISTANTITEM" leaf="false" name="Mezők hozzáadása" pos="0"/>
+            <TileAssistants/>
+        </Assistants>
+        <Attachements>
+            <ATCSIZES size="0MB" sum_size="0MB" rsize="2147483647" rsum_size="2147483647"/>
+        </Attachements>
+        <BalanceData adonem="421" fid="0A0001A001A" msg="befizetendő"/>
+        <BalanceData adonem="421" fid="0A0001A002A" msg="visszaigényelhető"/>
+        <BalanceData adonem="215" fid="0A0001A003A" msg="befizetendő"/>
+        <BalanceData adonem="215" fid="0A0001A004A" msg="visszaigényelhető"/>
+        <DynGroup chainId="120056">
+            <ButtonText name="add" value="900000"/>
+            <ButtonText name="remove" value="900001"/>
+            <ButtonText name="n_element" value="900002"/>
+        </DynGroup>
+        <DynamicStructure id="120057" maxCount="5">
+            <PartIndex fgId="120057" index="0"/>
+        </DynamicStructure>
+        <FieldGroup defaultGroup="true" index="0" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="NORMAL" id="120002" name="Adózó adatai" wId="FG1">
+            <Fid>0A0001E001A</Fid>
+            <Fid>0A0001E002A</Fid>
+            <Fid>0A0001E005A</Fid>
+            <Fid>0A0001E003A</Fid>
+            <Fid>0A0001E006A</Fid>
+            <Layout type="GROUP" wId="FG1_G1">
+                <Layout type="INLINE" wId="FG1_G1_I1">
+                    <Layout fixGrid="false" grid="3" type="INLINE_GROUP" wId="FG1_G1_I1_IG1">
+                        <Field id="0A0001E001A" label="Adószám" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="adózó_adószám" webLength="3" wId="FG1_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="########-#-##" maxLength="13" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="3" type="INLINE_GROUP" wId="FG1_G1_I1_IG2">
+                        <Field id="0A0001E002A" label="Adóazonosító jel" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="adózó_adóazonosító_jele" webLength="3" wId="FG1_G1_I1_IG2_F1" calculated="false" default="false" help="D_26.html" irids="3" mask="##########" maxLength="10" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="3" type="INLINE_GROUP" wId="FG1_G1_I1_IG3">
+                        <Field id="0A0001E005A" label="Jogelőd adószáma" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="jogelőd_adószám" webLength="3" wId="FG1_G1_I1_IG3_F1" calculated="false" default="false" help="D_54.html" irids="3" mask="########-#-##" maxLength="13" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="3" type="INLINE_GROUP" wId="FG1_G1_I1_IG4">
+                        <Field id="0A0001E003A" label="FELIR azonosító" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="FELIR_szám" webLength="3" wId="FG1_G1_I1_IG4_F1" calculated="false" default="false" help="D_60.html" irids="5" mask="#########" maxLength="9" metaType="1"/>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout type="GROUP" wId="FG1_G2">
+                <Layout grid="12" longLabel="false" type="VERTICAL" wId="FG1_G2_V1">
+                    <Field id="0A0001E006A" label="Név" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="adózó_név" webLength="12" wId="FG1_G2_V1_F1" calculated="false" default="false" irids="8" maxLength="80" metaType="1"/>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup defaultGroup="false" index="1" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="NORMAL" id="120003" name="Ügyintéző adatai" wId="FG2">
+            <Fid>0A0001E007A</Fid>
+            <Fid>0A0001E008A</Fid>
+            <Layout type="GROUP" wId="FG2_G1">
+                <Layout type="INLINE" wId="FG2_G1_I1">
+                    <Layout fixGrid="false" grid="8" type="INLINE_GROUP" wId="FG2_G1_I1_IG1">
+                        <Field id="0A0001E007A" label="Név" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="ügyintéző_neve" webLength="8" wId="FG2_G1_I1_IG1_F1" calculated="false" default="false" irids="8" maxLength="80" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG2_G1_I1_IG2">
+                        <Field id="0A0001E008A" label="Telefonszám" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="ügyintéző_telefon" webLength="4" wId="FG2_G1_I1_IG2_F1" calculated="false" default="false" irids="8" maxLength="40" metaType="1"/>
+                    </Layout>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup defaultGroup="false" index="2" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="NORMAL" id="120007" name="Bevallást kitöltő adatai" wId="FG3">
+            <Fid>0A0001G004A</Fid>
+            <Fid>0A0001G006A</Fid>
+            <Fid>0A0001G008A</Fid>
+            <Fid>0A0001G010A</Fid>
+            <Fid>0A0001G011A</Fid>
+            <Fid>0A0001G003A</Fid>
+            <Fid>0A0001G005A</Fid>
+            <Fid>0A0001G007A</Fid>
+            <Fid>0A0001G009A</Fid>
+            <Layout label="Adótanácsadó, adószakértő vagy okleveles adószakértő adatai" type="SUBTITLE" wId="FG3_ST1">
+                <Layout type="GROUP" wId="FG3_ST1_G1">
+                    <Layout type="INLINE" wId="FG3_ST1_G1_I1">
+                        <Layout fixGrid="false" grid="8" type="INLINE_GROUP" wId="FG3_ST1_G1_I1_IG1">
+                            <Field id="0A0001G004A" label="Név" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="adótanácsadó_neve" webLength="8" wId="FG3_ST1_G1_I1_IG1_F1" calculated="false" default="false" irids="8" maxLength="80" metaType="1"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="2" type="INLINE_GROUP" wId="FG3_ST1_G1_I1_IG2">
+                            <Field id="0A0001G006A" label="Adóazonosító szám" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="adótanácsadó_adóazonosító" webLength="2" wId="FG3_ST1_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="###########" maxLength="11" metaType="1"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="2" type="INLINE_GROUP" wId="FG3_ST1_G1_I1_IG3">
+                            <Field id="0A0001G008A" label="Igazolvány szám" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="adótanácsadó_bizonyítvány" webLength="2" wId="FG3_ST1_G1_I1_IG3_F1" calculated="false" default="false" irids="8" maxLength="40" metaType="1"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout label="Meghatalmazott, képviselő adatai" type="SUBTITLE" wId="FG3_ST2">
+                <Layout type="GROUP" wId="FG3_ST2_G1">
+                    <Layout type="INLINE" wId="FG3_ST2_G1_I1">
+                        <Layout fixGrid="false" grid="8" type="INLINE_GROUP" wId="FG3_ST2_G1_I1_IG1">
+                            <Field id="0A0001G010A" label="Neve" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="meghatalmazott_név" webLength="8" wId="FG3_ST2_G1_I1_IG1_F1" calculated="false" default="false" irids="8" maxLength="80" metaType="1"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG3_ST2_G1_I1_IG2">
+                            <Field id="0A0001G011A" label="Adóazonosító száma" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="meghatalmazott_azon" webLength="4" wId="FG3_ST2_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="###########" maxLength="11" metaType="1"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout label="Meghatalmazott, pénzügyi képviselő jelölése" type="SUBTITLE" wId="FG3_ST3">
+                <Layout type="HORIZONTAL" wId="FG3_ST3_H1">
+                    <Field id="0A0001G003A" label="Állami adó- és vámhatósághoz bejelentett, a bevallás aláírására jogosult állandó meghatalmazott jelölése" labelPosition="RIGHT" mandatory="false" readonly="false" searcher="false" type="CHECKBOX" vid="állandó_meghatalmazás" webLength="4" wId="FG3_ST3_H1_F1" calculated="false" default="false" irids="9" metaType="4"/>
+                </Layout>
+                <Layout type="HORIZONTAL" wId="FG3_ST3_H2">
+                    <Field id="0A0001G005A" label="Eseti meghatalmazás csatolásának jelölése" labelPosition="RIGHT" mandatory="false" readonly="false" searcher="false" type="CHECKBOX" vid="eseti_meghatalmazás" webLength="4" wId="FG3_ST3_H2_F1" calculated="false" default="false" irids="9" metaType="4"/>
+                </Layout>
+                <Layout type="HORIZONTAL" wId="FG3_ST3_H3">
+                    <Field id="0A0001G007A" label="Állami adó- és vámhatósághoz bejelentett pénzügyi képviselő jelölése" labelPosition="RIGHT" mandatory="false" readonly="false" searcher="false" type="CHECKBOX" vid="pénzügyi_képviselő" webLength="4" wId="FG3_ST3_H3_F1" calculated="false" default="false" irids="9" metaType="4"/>
+                </Layout>
+                <Layout type="HORIZONTAL" wId="FG3_ST3_H4">
+                    <Field id="0A0001G009A" label="Állami adó- és vámhatósághoz bejelentett törvényes képviselő jelölése" labelPosition="RIGHT" mandatory="false" readonly="false" searcher="false" type="CHECKBOX" vid="törvényes_képviselő" webLength="4" wId="FG3_ST3_H4_F1" calculated="false" default="false" irids="9" metaType="4"/>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup defaultGroup="false" index="3" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="NORMAL" id="120006" name="Bevallás jellemzői" wId="FG4">
+            <Fid>0A0001F001A</Fid>
+            <Fid>0A0001F002A</Fid>
+            <Fid>0A0001F007A</Fid>
+            <Fid>0A0001F008A</Fid>
+            <Fid>0A0001F009A</Fid>
+            <Fid>0A0001F010A</Fid>
+            <Fid>0A0001F006A</Fid>
+            <Fid>0A0001E004A</Fid>
+            <Layout label="Bevallási időszak / Lezárt előző naptári év" type="SUBTITLE" wId="FG4_ST1">
+                <Layout type="GROUP" wId="FG4_ST1_G1">
+                    <Layout type="INLINE" wId="FG4_ST1_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG4_ST1_G1_I1_IG1">
+                            <Field id="0A0001F001A" label="Kezdete" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="DATE" vid="bevtól" webLength="4" wId="FG4_ST1_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="20##.##.##-" maxLength="8" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="1" type="INLINE_GROUP">
+                            <Field id="120011" mandatory="false" readonly="false" searcher="false" separatorType="LABEL" separatorValue="-" style="" type="SEPARATOR" webLength="1" calculated="false" default="false" irids="0" metaType="0"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG4_ST1_G1_I1_IG3">
+                            <Field id="0A0001F002A" label="Vége" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="DATE" vid="bevig" webLength="4" wId="FG4_ST1_G1_I1_IG3_F1" calculated="false" default="false" irids="3" mask="20##.##.##" maxLength="8" metaType="2"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout label="Bevallás" type="SUBTITLE" wId="FG4_ST2">
+                <Layout type="GROUP" wId="FG4_ST2_G1">
+                    <Layout type="INLINE" wId="FG4_ST2_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG4_ST2_G1_I1_IG1">
+                            <Field id="0A0001F007A" label="Típusa" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="COMBOBOX" vid="bev_tipus" webLength="4" wId="FG4_ST2_G1_I1_IG1_F1" calculated="false" default="false" dynList="false" help="D_73.html" irids="1" maxLength="1" metaType="1" validation="true" valuesListIndex="3"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG4_ST2_G1_I1_IG2">
+                            <Field id="0A0001F008A" label="Fajtája" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="COMBOBOX" vid="bev_fajta" webLength="4" wId="FG4_ST2_G1_I1_IG2_F1" calculated="false" default="false" dynList="false" help="D_74.html" irids="3" maxLength="1" metaType="2" validation="true" valuesListIndex="4"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout type="HORIZONTAL" wId="FG4_H3">
+                <Field id="0A0001F009A" label="Adómat az alábbi jogszabályhely alapján állapítom meg" labelGrid="8" labelPosition="LEFT" mandatory="false" readonly="false" searcher="false" type="COMBOBOX" vid="ado_megall_jogsz" webLength="2" wId="FG4_H3_F1" calculated="false" default="false" dynList="false" help="D_72.html" irids="3" maxLength="1" metaType="2" validation="true" valuesListIndex="2"/>
+            </Layout>
+            <Layout type="HORIZONTAL" wId="FG4_H4">
+                <Field id="0A0001F010A" label="Az Éltv. 47/B. § (9) bekezdése alapján elsődlegesen végső fogyasztónak értékesítő  mikrovállalkozásnak / kistermelőnek vagy kisvállalkozásnak minősülök." labelGrid="8" labelPosition="LEFT" mandatory="false" readonly="false" searcher="false" type="COMBOBOX" vid="mikro_kisterm" webLength="2" wId="FG4_H4_F1" calculated="false" default="false" dynList="false" help="D_75.html" irids="3" maxLength="1" metaType="2" validation="true" valuesListIndex="5"/>
+            </Layout>
+            <Layout help="S_65.html" label="Adózói javítás, önellenőrzés" type="SUBTITLE" wId="FG4_ST5">
+                <Layout type="GROUP" wId="FG4_ST5_G1">
+                    <Layout type="INLINE" wId="FG4_ST5_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG4_ST5_G1_I1_IG1">
+                            <Field id="0A0001F006A" label="Bevallás jellege" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="COMBOBOX" vid="bev_jelleg" webLength="4" wId="FG4_ST5_G1_I1_IG1_F1" calculated="false" default="false" dynList="false" irids="1" maxLength="1" metaType="1" validation="true" valuesListIndex="1"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG4_ST5_G1_I1_IG2">
+                            <Field id="0A0001E004A" label="Hibásnak minősített bevallás vonalkódja" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="vonalkód" webLength="4" wId="FG4_ST5_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="##########" maxLength="10" metaType="1"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup defaultGroup="false" index="4" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="NORMAL" id="120023" name="Élelmiszerlánc felügyeleti díj megállapítása (Adónemkód 421)" wId="FG5">
+            <Fid>0B0001C0001AA</Fid>
+            <Fid>0B0001C0001BA</Fid>
+            <Fid>0B0001C50001A</Fid>
+            <Fid>0B0001C50002A</Fid>
+            <Fid>0B0001C50003A</Fid>
+            <Fid>0B0001C0002BA</Fid>
+            <Fid>0B0001C0003BA</Fid>
+            <Fid>0B0001C0004BA</Fid>
+            <Fid>0B0001C0005BA</Fid>
+            <Fid>0B0001C50000A</Fid>
+            <Layout label="Általános szabályok szerinti adómegállapítás (Éltv. 47/B. § (3) bek.)" type="SUBTITLE" wId="FG5_ST1">
+                <Layout type="GROUP" wId="FG5_ST1_G1">
+                    <Layout type="INLINE" wId="FG5_ST1_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG5_ST1_G1_I1_IG1">
+                            <Field id="0B0001C0001AA" label="Adóalap (E Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]A1" webLength="4" wId="FG5_ST1_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG5_ST1_G1_I1_IG2">
+                            <Field id="0B0001C0001BA" label="Adó  (E Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]B1" webLength="4" wId="FG5_ST1_G1_I1_IG2_F1" calculated="true" default="false" help="D_114.html" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout label="Általános szabályok szerinti adómegállapításból - Termelői szerveződés/átvállaló gazdasági társaság felügyeleti díjköteles nettó árbevétele" type="SUBTITLE" wId="FG5_ST2">
+                <Layout grid="4" longLabel="false" type="VERTICAL" wId="FG5_ST2_V1">
+                    <Field id="0B0001C50001A" label="Adóalap (E Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]A101" webLength="4" wId="FG5_ST2_V1_F1" calculated="false" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                </Layout>
+            </Layout>
+            <Layout label="Általános szabályok szerinti adómegállapításból - Az átvállalt nettó árbevétel összege és az átvállalással érintett adózók száma" type="SUBTITLE" wId="FG5_ST3">
+                <Layout type="GROUP" wId="FG5_ST3_G1">
+                    <Layout type="INLINE" wId="FG5_ST3_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG5_ST3_G1_I1_IG1">
+                            <Field id="0B0001C50002A" label="Adóalap (E Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]A102" webLength="4" wId="FG5_ST3_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG5_ST3_G1_I1_IG2">
+                            <Field id="0B0001C50003A" label="Érintett adózók száma (fő)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]C102" webLength="4" wId="FG5_ST3_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="!fő" maxLength="3" metaType="2"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout label="Mikrovállalkozásként / kistermelőként történő adómegállapítás (Éltv. 47/B. § (9) bek.)" type="SUBTITLE" wId="FG5_ST4">
+                <Layout grid="4" longLabel="false" type="VERTICAL" wId="FG5_ST4_V1">
+                    <Field id="0B0001C0002BA" label="Adó  (E Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]B2" webLength="4" wId="FG5_ST4_V1_F1" calculated="true" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                </Layout>
+            </Layout>
+            <Layout label="Kisvállalkozásként történő adómegállapítás (Éltv. 47/B. § (9) bek.)" type="SUBTITLE" wId="FG5_ST5">
+                <Layout grid="4" longLabel="false" type="VERTICAL" wId="FG5_ST5_V1">
+                    <Field id="0B0001C0003BA" label="Adó  (E Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]B3" webLength="4" wId="FG5_ST5_V1_F1" calculated="true" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                </Layout>
+            </Layout>
+            <Layout label="07.31. napjáig esedékes felügyeleti díj összege" type="SUBTITLE" wId="FG5_ST6">
+                <Layout grid="4" longLabel="false" type="VERTICAL" wId="FG5_ST6_V1">
+                    <Field id="0B0001C0004BA" label="Adó  (E Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]B4" webLength="4" wId="FG5_ST6_V1_F1" calculated="true" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                </Layout>
+            </Layout>
+            <Layout label="Az adóévet követő év 01.31. napjáig esedékes felügyeleti díj összege" type="SUBTITLE" wId="FG5_ST7">
+                <Layout grid="4" longLabel="false" type="VERTICAL" wId="FG5_ST7_V1">
+                    <Field id="0B0001C0005BA" label="Adó  (E Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]B5" webLength="4" wId="FG5_ST7_V1_F1" calculated="true" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                </Layout>
+            </Layout>
+            <Layout label="Nyilatkozom a felügyeleti díjfizetést megalapozó, átvállaló által átvállalt nettó árbevétel összegéről (Éltv. 47/B. § (6) bek.)" type="SUBTITLE" wId="FG5_ST8">
+                <Layout grid="4" longLabel="false" type="VERTICAL" wId="FG5_ST8_V1">
+                    <Field id="0B0001C50000A" label="Adóalap (E Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]A6" webLength="4" wId="FG5_ST8_V1_F1" calculated="false" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup defaultGroup="false" index="6" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="NORMAL" id="120027" name="Ismételt önellenőrzés" wId="FG6">
+            <Fid>0C0001C001A</Fid>
+            <Layout type="HORIZONTAL" wId="FG6_H1">
+                <Field id="0C0001C001A" label="Ismételt önellenőrzés jelölése (x)" labelPosition="LEFT" mandatory="false" readonly="false" searcher="false" type="CHECKBOX" vid="ism_önelllenőrzés" webLength="4" wId="FG6_H1_F1" calculated="false" default="false" irids="9" metaType="4"/>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup defaultGroup="false" index="7" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="NORMAL" id="120029" name="Élelmiszerlánc felügyeleti díj (Adónemkód 421)" wId="FG7">
+            <Fid>0C0001D0001AA</Fid>
+            <Fid>0C0001D0001BA</Fid>
+            <Fid>0C0001D0001CA</Fid>
+            <Fid>0C0001D0002AA</Fid>
+            <Fid>0C0001D0002BA</Fid>
+            <Fid>0C0001D0002CA</Fid>
+            <Fid>0C0001D0003AA</Fid>
+            <Fid>0C0001D0003BA</Fid>
+            <Fid>0C0001D0003CA</Fid>
+            <Layout label="Felügyeleti díj összege" type="SUBTITLE" wId="FG7_ST1">
+                <Layout type="GROUP" wId="FG7_ST1_G1">
+                    <Layout type="INLINE" wId="FG7_ST1_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG7_ST1_G1_I1_IG1">
+                            <Field id="0C0001D0001AA" label="Eredeti összeg ezer Ft-ban" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]A1" webLength="4" wId="FG7_ST1_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG7_ST1_G1_I1_IG2">
+                            <Field id="0C0001D0001BA" label="Módosított összeg ezer Ft-ban" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]B1" webLength="4" wId="FG7_ST1_G1_I1_IG2_F1" calculated="true" default="false" irids="3" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG7_ST1_G1_I1_IG3">
+                            <Field id="0C0001D0001CA" label="Különbözet ezer Ft-ban (+/-)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]C1" webLength="4" wId="FG7_ST1_G1_I1_IG3_F1" calculated="true" default="false" irids="10" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout label="07.31. napjáig esedékes felügyeleti díj összege" type="SUBTITLE" wId="FG7_ST2">
+                <Layout type="GROUP" wId="FG7_ST2_G1">
+                    <Layout type="INLINE" wId="FG7_ST2_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG7_ST2_G1_I1_IG1">
+                            <Field id="0C0001D0002AA" label="Eredeti összeg ezer Ft-ban" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]A2" webLength="4" wId="FG7_ST2_G1_I1_IG1_F1" calculated="true" default="false" irids="3" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG7_ST2_G1_I1_IG2">
+                            <Field id="0C0001D0002BA" label="Módosított összeg ezer Ft-ban" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]B2" webLength="4" wId="FG7_ST2_G1_I1_IG2_F1" calculated="true" default="false" irids="3" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG7_ST2_G1_I1_IG3">
+                            <Field id="0C0001D0002CA" label="Különbözet ezer Ft-ban (+/-)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]C2" webLength="4" wId="FG7_ST2_G1_I1_IG3_F1" calculated="true" default="false" irids="10" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout label="Az adóévet követő év 01.31. napjáig esedékes felügyeleti díj összege" type="SUBTITLE" wId="FG7_ST3">
+                <Layout type="GROUP" wId="FG7_ST3_G1">
+                    <Layout type="INLINE" wId="FG7_ST3_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG7_ST3_G1_I1_IG1">
+                            <Field id="0C0001D0003AA" label="Eredeti összeg ezer Ft-ban (+/-)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]A3" webLength="4" wId="FG7_ST3_G1_I1_IG1_F1" calculated="true" default="false" irids="10" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG7_ST3_G1_I1_IG2">
+                            <Field id="0C0001D0003BA" label="Módosított összeg ezer Ft-ban (+/-)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]B3" webLength="4" wId="FG7_ST3_G1_I1_IG2_F1" calculated="true" default="false" irids="10" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG7_ST3_G1_I1_IG3">
+                            <Field id="0C0001D0003CA" label="Különbözet ezer Ft-ban (+/-)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]C3" webLength="4" wId="FG7_ST3_G1_I1_IG3_F1" calculated="true" default="false" irids="10" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup defaultGroup="false" index="8" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="NORMAL" id="120034" name="Önellenőrzési pótlék összege (Adónemkód 215)" wId="FG8">
+            <Fid>0C0001E0004AA</Fid>
+            <Fid>0C0001E0004BA</Fid>
+            <Layout label="Önellenőrzési pótlék" type="SUBTITLE" wId="FG8_ST1">
+                <Layout type="GROUP" wId="FG8_ST1_G1">
+                    <Layout type="INLINE" wId="FG8_ST1_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG8_ST1_G1_I1_IG1">
+                            <Field id="0C0001E0004AA" label="Eredeti összeg ezer Ft-ban (+/-)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]A4" webLength="4" wId="FG8_ST1_G1_I1_IG1_F1" calculated="true" default="false" irids="10" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG8_ST1_G1_I1_IG2">
+                            <Field id="0C0001E0004BA" label="Összege (ezer Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]B4" webLength="4" wId="FG8_ST1_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup defaultGroup="false" index="9" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="NORMAL" id="120035" name="Korábbi élelmiszerlánc felügyeleti díj-önellenőrzési pótlékjának összege" wId="FG9">
+            <Fid>0C0001F0005AA</Fid>
+            <Fid>0C0001F0005BA</Fid>
+            <Fid>0C0001F0005CA</Fid>
+            <Fid>0C0001F0006AA</Fid>
+            <Fid>0C0001F0006BA</Fid>
+            <Fid>0C0001F0006CA</Fid>
+            <Layout label="Az önellenőrzési pótlék alapja (Adónemkód: 421)" type="SUBTITLE" wId="FG9_ST1">
+                <Layout type="GROUP" wId="FG9_ST1_G1">
+                    <Layout type="INLINE" wId="FG9_ST1_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG9_ST1_G1_I1_IG1">
+                            <Field id="0C0001F0005AA" label="Eredeti összeg ezer Ft-ban (+/-)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]A5" webLength="4" wId="FG9_ST1_G1_I1_IG1_F1" calculated="false" default="false" irids="10" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG9_ST1_G1_I1_IG2">
+                            <Field id="0C0001F0005BA" label="Módosított összeg ezer Ft-ban (+/-)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]B5" webLength="4" wId="FG9_ST1_G1_I1_IG2_F1" calculated="true" default="false" irids="10" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG9_ST1_G1_I1_IG3">
+                            <Field id="0C0001F0005CA" label="Különbözet ezer Ft-ban (+/-)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]C5" webLength="4" wId="FG9_ST1_G1_I1_IG3_F1" calculated="true" default="false" irids="10" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout label="Az önellenőrzési pótlék összege (Adónemkód: 215)" type="SUBTITLE" wId="FG9_ST2">
+                <Layout type="GROUP" wId="FG9_ST2_G1">
+                    <Layout type="INLINE" wId="FG9_ST2_G1_I1">
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG9_ST2_G1_I1_IG1">
+                            <Field id="0C0001F0006AA" label="Eredeti összeg ezer Ft-ban" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]A6" webLength="4" wId="FG9_ST2_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG9_ST2_G1_I1_IG2">
+                            <Field id="0C0001F0006BA" label="Módosított összeg ezer Ft-ban" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]B6" webLength="4" wId="FG9_ST2_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                        <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG9_ST2_G1_I1_IG3">
+                            <Field id="0C0001F0006CA" label="Különbözet ezer Ft-ban (+/-)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ONELL]C6" webLength="4" wId="FG9_ST2_G1_I1_IG3_F1" calculated="true" default="false" irids="10" mask="!ezer" maxLength="12" metaType="2"/>
+                        </Layout>
+                    </Layout>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup defaultGroup="false" index="-1" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="WEBHEADER" id="120042" name="Fejléc" wId="FG10">
+            <Fid>0A0001E001A</Fid>
+            <Fid>0A0001E002A</Fid>
+            <Fid>0A0001E005A</Fid>
+            <Fid>0A0001E006A</Fid>
+            <Layout type="GROUP" wId="FG10_G1">
+                <Layout type="INLINE" wId="FG10_G1_I1">
+                    <Layout fixGrid="false" grid="3" type="INLINE_GROUP" wId="FG10_G1_I1_IG1">
+                        <Field id="0A0001E001A" label="Adószám" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="adózó_adószám" webLength="3" wId="FG10_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="########-#-##" maxLength="13" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="3" type="INLINE_GROUP" wId="FG10_G1_I1_IG2">
+                        <Field id="0A0001E002A" label="Adóazonosító jel" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="adózó_adóazonosító_jele" webLength="3" wId="FG10_G1_I1_IG2_F1" calculated="false" default="false" help="D_26.html" irids="3" mask="##########" maxLength="10" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="3" type="INLINE_GROUP" wId="FG10_G1_I1_IG3">
+                        <Field id="0A0001E005A" label="Jogelőd adószáma" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="jogelőd_adószám" webLength="3" wId="FG10_G1_I1_IG3_F1" calculated="false" default="false" help="D_54.html" irids="3" mask="########-#-##" maxLength="13" metaType="1"/>
+                    </Layout>
+                </Layout>
+            </Layout>
+            <Layout type="GROUP" wId="FG10_G2">
+                <Layout grid="12" longLabel="false" type="VERTICAL" wId="FG10_G2_V1">
+                    <Field id="0A0001E006A" label="Név" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="adózó_név" webLength="12" wId="FG10_G2_V1_F1" calculated="false" default="false" irids="8" maxLength="80" metaType="1"/>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup defaultGroup="false" index="-1" maxCount="0" toggleSwitch="false" type="SIMPLE" fgroupType="EGYENLEG" id="120043" name="Egyenlegek" wId="FG11">
+            <Fid>0A0001A001A</Fid>
+            <Fid>0A0001A003A</Fid>
+            <Fid>0A0001A002A</Fid>
+            <Fid>0A0001A004A</Fid>
+        </FieldGroup>
+        <FieldGroup chainId="120056" chainView="VERTICAL" defaultGroup="false" index="5" maxCount="1" nextId="120058" toggleSwitch="false" type="DYNAMIC" fgroupType="NORMAL" id="120057" name="Az alábbi termelői szerveződések / adózók vállalták át felügyeleti díjfizetési kötelezettségemet" wId="FG12">
+            <Fid>0B0001D50007A</Fid>
+            <Fid>0B0001D50004A</Fid>
+            <EnabledView>VERTICAL</EnabledView>
+            <Layout type="GROUP" wId="FG12_G1">
+                <Layout type="INLINE" wId="FG12_G1_I1">
+                    <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG12_G1_I1_IG1">
+                        <Field id="0B0001D50007A" label="Átvállaló adószáma" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]A21" webLength="4" wId="FG12_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="########-#-##" maxLength="13" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="5" type="INLINE_GROUP" wId="FG12_G1_I1_IG2">
+                        <Field id="0B0001D50004A" label="Átvállaló által átvállalt nettó árbevétel (ezer Ft-ban)" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]B21" webLength="5" wId="FG12_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                    </Layout>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup chainId="120056" chainView="VERTICAL" defaultGroup="false" index="-1" maxCount="1" nextId="120059" toggleSwitch="false" type="DYNAMIC" fgroupType="NORMAL" id="120058" name="Mezőcsoport" wId="FG13">
+            <Fid>0B0001D50008A</Fid>
+            <Fid>0B0001D50006A</Fid>
+            <EnabledView>VERTICAL</EnabledView>
+            <Layout type="GROUP" wId="FG13_G1">
+                <Layout type="INLINE" wId="FG13_G1_I1">
+                    <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG13_G1_I1_IG1">
+                        <Field id="0B0001D50008A" label="" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]A22" webLength="4" wId="FG13_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="########-#-##" maxLength="13" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="5" type="INLINE_GROUP" wId="FG13_G1_I1_IG2">
+                        <Field id="0B0001D50006A" label="" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]B22" webLength="5" wId="FG13_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                    </Layout>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup chainId="120056" chainView="VERTICAL" defaultGroup="false" index="-1" maxCount="1" nextId="120060" toggleSwitch="false" type="DYNAMIC" fgroupType="NORMAL" id="120059" name="Mezőcsoport" wId="FG14">
+            <Fid>0B0001D50009A</Fid>
+            <Fid>0B0001D50005A</Fid>
+            <EnabledView>VERTICAL</EnabledView>
+            <Layout type="GROUP" wId="FG14_G1">
+                <Layout type="INLINE" wId="FG14_G1_I1">
+                    <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG14_G1_I1_IG1">
+                        <Field id="0B0001D50009A" label="" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]A23" webLength="4" wId="FG14_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="########-#-##" maxLength="13" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="5" type="INLINE_GROUP" wId="FG14_G1_I1_IG2">
+                        <Field id="0B0001D50005A" label="" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]B23" webLength="5" wId="FG14_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                    </Layout>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup chainId="120056" chainView="VERTICAL" defaultGroup="false" index="-1" maxCount="1" nextId="120061" toggleSwitch="false" type="DYNAMIC" fgroupType="NORMAL" id="120060" name="Mezőcsoport" wId="FG15">
+            <Fid>0B0001D50010A</Fid>
+            <Fid>0B0001D50012A</Fid>
+            <EnabledView>VERTICAL</EnabledView>
+            <Layout type="GROUP" wId="FG15_G1">
+                <Layout type="INLINE" wId="FG15_G1_I1">
+                    <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG15_G1_I1_IG1">
+                        <Field id="0B0001D50010A" label="" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]A24" webLength="4" wId="FG15_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="########-#-##" maxLength="13" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="5" type="INLINE_GROUP" wId="FG15_G1_I1_IG2">
+                        <Field id="0B0001D50012A" label="" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]B24" webLength="5" wId="FG15_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                    </Layout>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <FieldGroup chainId="120056" chainView="VERTICAL" defaultGroup="false" index="-1" maxCount="1" nextId="120057" toggleSwitch="false" type="DYNAMIC" fgroupType="NORMAL" id="120061" name="Mezőcsoport" wId="FG16">
+            <Fid>0B0001D50011A</Fid>
+            <Fid>0B0001D50013A</Fid>
+            <EnabledView>VERTICAL</EnabledView>
+            <Layout type="GROUP" wId="FG16_G1">
+                <Layout type="INLINE" wId="FG16_G1_I1">
+                    <Layout fixGrid="false" grid="4" type="INLINE_GROUP" wId="FG16_G1_I1_IG1">
+                        <Field id="0B0001D50011A" label="" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]A25" webLength="4" wId="FG16_G1_I1_IG1_F1" calculated="false" default="false" irids="3" mask="########-#-##" maxLength="13" metaType="1"/>
+                    </Layout>
+                    <Layout fixGrid="false" grid="5" type="INLINE_GROUP" wId="FG16_G1_I1_IG2">
+                        <Field id="0B0001D50013A" label="" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELMDIJ_01]B25" webLength="5" wId="FG16_G1_I1_IG2_F1" calculated="false" default="false" irids="3" mask="!E Ft" maxLength="10" metaType="2"/>
+                    </Layout>
+                </Layout>
+            </Layout>
+        </FieldGroup>
+        <InputRule irid="1" irule="[A-Z]"/>
+        <InputRule irid="2" irule="[0-9,.]"/>
+        <InputRule irid="3" irule="[0-9]"/>
+        <InputRule irid="4" irule="[0-9+\-,.]"/>
+        <InputRule irid="5" irule="[A-Z0-9]"/>
+        <InputRule irid="6" irule="[A-ZÁÉÍÓÖŐÚÜŰ]"/>
+        <InputRule irid="7" irule="[^0-9]"/>
+        <InputRule irid="8" irule="[\x20-\uFFFF]"/>
+        <InputRule irid="9" irule="[ X]"/>
+        <InputRule irid="10" irule="[0-9+-]"/>
+        <Languages>
+            <LanguageCode>HU</LanguageCode>
+            <Language default="true" value="HU">
+                <Text id="900000" value="Új átvállaló"/>
+                <Text id="900001" value="Átvállaló törlése"/>
+                <Text id="900002" value=". átvállaló"/>
+            </Language>
+        </Languages>
+        <Menu>
+            <MenuItem id="ROOT_MENUITEM" leaf="false" name="Mezők hozzáadása" pos="0" wizard="false">
+                <MenuItem id="120001" leaf="true" name="Azonosító adatok" parentId="ROOT_MENUITEM" pos="1" wizard="false">
+                    <FieldGroupId>120002</FieldGroupId>
+                    <FieldGroupId>120003</FieldGroupId>
+                    <FieldGroupId>120007</FieldGroupId>
+                    <FieldGroupId>120006</FieldGroupId>
+                </MenuItem>
+                <MenuItem help="M_120022.html" id="120022" leaf="true" name="Élelmiszerlánc felügyeleti díj megállapítása" parentId="ROOT_MENUITEM" pos="2" wizard="false">
+                    <FieldGroupId>120023</FieldGroupId>
+                    <FieldGroupId>120057</FieldGroupId>
+                </MenuItem>
+                <MenuItem id="120026" leaf="true" name="Önellenőrzés" parentId="ROOT_MENUITEM" pos="3" wizard="false">
+                    <FieldGroupId>120027</FieldGroupId>
+                    <FieldGroupId>120029</FieldGroupId>
+                    <FieldGroupId>120034</FieldGroupId>
+                    <FieldGroupId>120035</FieldGroupId>
+                </MenuItem>
+            </MenuItem>
+            <TileMenus>
+                <TileMenuItem id="120001"/>
+                <TileMenuItem id="120022"/>
+                <TileMenuItem id="120026"/>
+            </TileMenus>
+        </Menu>
+        <Message id="1" msgLevel="warning">
+            <CalcId>74</CalcId>
+            <CalcId>72</CalcId>
+            <CalcId>73</CalcId>
+            <Msg>Alapbevallás esetén önellenőrzés és az önellenőrzés indokához kapcsolódó nyilatkozat nem kitölthető. (Hibakód=&lt;B013&gt;)</Msg>
+        </Message>
+        <Message id="2" msgLevel="warning">
+            <CalcId>91</CalcId>
+            <Msg>"Bevallást kitöltő adatai" rész kizárólag ONYA publikus felületen töltendő. (Hibakód=&lt;1039676/M007&gt;)</Msg>
+        </Message>
+        <Message id="3" msgLevel="fatalerror">
+            <CalcId>90</CalcId>
+            <Msg>[Nyomtatvány] Ha Ön úgy nyilatkozik, hogy az általános szabályok szerint állapítja meg adóalapját, akkor az "általános szabályok szerint adómegállapítás (Éltv. 47/B. § (3) bek.)" szerint kell adóját megállapítani, egyéb jogalap (Éltv. 47/B. § (9) bek.) esetében fix összegben kerülhet sor adója megállapításra. Kérem vizsgálja felül bevallását. (Hibakód=&lt;1039686/M006&gt;)</Msg>
+        </Message>
+        <Message id="4" msgLevel="error">
+            <CalcId>40</CalcId>
+            <CalcId>41</CalcId>
+            <Msg>[Nyomtatvány] Kérem az önellenőrzés típusának (első vagy ismételt) megfelelően jelentse be az önellenőrzéssel kapcsolatos valamennyi adatot. (Hibakód=&lt;1039691/O006&gt;)</Msg>
+        </Message>
+        <Message id="5" msgLevel="error">
+            <CalcId>46</CalcId>
+            <CalcId>95</CalcId>
+            <Msg>A bevallás jellege mező értéke O (önellenőrzés), akkor az önellenőrzési mezőcsoport kitöltése kötelező. (Hibakód=&lt;o008&gt;)</Msg>
+        </Message>
+        <Message id="6" msgLevel="error">
+            <CalcId>71</CalcId>
+            <CalcId>69</CalcId>
+            <CalcId>70</CalcId>
+            <Msg>Ha az "Állami adó- és vámhatósághoz bejelentett, az adatszolgáltatás/bevallás aláírására jogosult állandó meghatalmazás jelölése" vagy az "Eseti meghatalmazás csatolásának jelölése" vagy az "Állami adó- és vámhatósághoz bejelentett pénzügyi képviselő jelölése" vagy az "Állami adó- és vámhatósághoz bejelentett törvényes képviselő jelölése" mezők közül valamelyik kitöltött, akkor a "Meghatalmazott, képviselő neve" és az "Adóazonosító száma" mezők kitöltése is kötelező. Fordítva is igaz, ha a "Meghatalmazott, képviselő neve" és az "Adóazonosító száma" mezők kitöltöttek, akkor az "Állami adó- és vámhatósághoz bejelentett, az adatszolgáltatás/bevallás aláírására jogosult állandó meghatalmazás jelölése" vagy az "Eseti meghatalmazás csatolásának jelölése" vagy az "Állami adó- és vámhatósághoz bejelentett pénzügyi képviselő jelölése" vagy az "Állami adó- és vámhatósághoz bejelentett törvényes képviselő jelölése" mezők közül valamelyik kötelezően kitöltendő.  (Hibakód=&lt;h011&gt;)</Msg>
+        </Message>
+        <Message id="7" msgLevel="error">
+            <CalcId>87</CalcId>
+            <CalcId>138</CalcId>
+            <CalcId>43</CalcId>
+            <CalcId>17</CalcId>
+            <CalcId>18</CalcId>
+            <CalcId>19</CalcId>
+            <CalcId>20</CalcId>
+            <CalcId>139</CalcId>
+            <Msg>Kérem, hogy a bevallás benyújtásához szükséges valamennyi kötelező mezőt töltse ki. Azonosító adatok, bevallás adatai és adóalap. (Hibakód=&lt;M001&gt;)</Msg>
+        </Message>
+        <Message id="8" msgLevel="error">
+            <CalcId>124</CalcId>
+            <Msg>[Nyomtatvány] Ha úgy nyilatkozik, hogy Öntől, mint termelői szerveződés tagjától vagy termelői szerveződéstől másik adózó vagy más adózók átvállalták felügyeleti díj bevallását és megfizetését, akkor köteles nyilatkozni az átvállaló adószámáról és az általa átvállalt összegről. (Hibakód=&lt;1039891/M010&gt;)</Msg>
+        </Message>
+        <Message id="9" msgLevel="error">
+            <CalcId>133</CalcId>
+            <Msg>[Nyomtatvány] Az Ön nyilatkozata szerinti átvállalással érintett nettó árbevétel összege nem egyezik meg az átvállaló(k) által átvállalt nettó árbevétel összegével, ellenőrizze a megadott értékeket. (Hibakód=&lt;1040208/M011&gt;)</Msg>
+        </Message>
+        <Message id="10" msgLevel="error">
+            <CalcId>128</CalcId>
+            <Msg>[Nyomtatvány] Ha Ön, mint termelői szerveződés vagy gazdálkodó szervezet, más adózótól átvállalja az élelmiszerlánc felügyeleti díj bevallását és megfizetését, akkor a saját tevékenysége utáni nettó árbevételről és az átvállalt nettó árbevételről is nyilatkoznia kell. A saját és átvállalt nettó árbevétel összegének meg kell egyeznie az élelmiszerlánc felügyeleti díj alapját képező általános szabályok szerint megállapított nettó árbevétel összegével. (Hibakód=&lt;1040209/M012&gt;)</Msg>
+        </Message>
+        <Message id="11" msgLevel="warning">
+            <CalcId>110</CalcId>
+            <Msg>[Nyomtatvány] Az önellenőrzési pótlék alapja hibás a bejelenteni kívánt adatok alapján. (Hibakód=&lt;1039690/O004&gt;)</Msg>
+        </Message>
+        <Message id="12" msgLevel="error">
+            <CalcId>100001</CalcId>
+            <CalcId>100002</CalcId>
+            <CalcId>100003</CalcId>
+            <Msg>[Nyomtatvány] Verziokontroll=1</Msg>
+        </Message>
+        <Message id="13" msgLevel="error">
+            <CalcId>27</CalcId>
+            <Msg>Az Ön által feltüntetett adószám hibás. / Csoportos áfa (áfa kód = 5), illetve csoportos társasági adó alanyok (áfa kód=6) ezt a bizonylatot nem nyújthatják be. (Hibakód=&lt;1033380/a003&gt;)</Msg>
+        </Message>
+        <Message id="14" msgLevel="error">
+            <CalcId>30</CalcId>
+            <CalcId>29</CalcId>
+            <Msg>Ha az Ön által feltüntetett adószám első számjegye 1, 2, 3 értékű, akkor a nyomtatvány főlapján nem töltheti ki az adóazonosító jelet. (Hibakód=&lt;1033390/b006&gt;)</Msg>
+        </Message>
+        <Message id="15" msgLevel="error">
+            <CalcId>28</CalcId>
+            <Msg>Az Ön által feltüntetett adóazonosító jel hibás. (Hibakód=&lt;1033386/b002&gt;)</Msg>
+        </Message>
+        <Message id="16" msgLevel="error">
+            <CalcId>1</CalcId>
+            <Msg>A FELIR azonosító megadása kötelező / a megadott FELIR azonosító hibás. (Hibakód=&lt;1039666/A002&gt;)</Msg>
+        </Message>
+        <Message id="17" msgLevel="warning">
+            <CalcId>42</CalcId>
+            <Msg>A NAV felhívásra benyújtott bevallás bevallás jellegének meg kell egyeznie a javítandó bevallás bevallás jellegével, kérem ellenőrizze benyújtás előtt a bevallás jelleg megfelelőségét. (Hibakód=&lt;1039679/B002&gt;)</Msg>
+        </Message>
+        <Message id="18" msgLevel="fatalerror">
+            <CalcId>140</CalcId>
+            <Msg>A 2024. január 1-jét megelőző bevallási időszakra a NÉBIH részére kell felügyeleti díj bevallási és fizetési kötelezettségét teljesítenie. Az adóhatóság részére a 2024. napátri évben és követő években esedékes élelmiszerlánc-felügyeleti díjjal kapcsolatos bevallásokat kell benyújtani és a fizetési kötelezettséget teljesíteni. (Hibakód=&lt;B011&gt;)</Msg>
+        </Message>
+        <Message id="19" msgLevel="error">
+            <CalcId>36</CalcId>
+            <Msg>A bevallási időszak végdátuma nem lehet korábbi, mint a bevallási időszak kezdő dátuma. (Hibakód=&lt;1033440/n018&gt;)</Msg>
+        </Message>
+        <Message id="20" msgLevel="error">
+            <CalcId>96</CalcId>
+            <Msg>A bevallási időszak kizárólag egy naptári évre eshet, január 1-jétől azonos naptári év december 31 napjáig, kivéve ha az adózó soron kívüli bevallást nyújt be, mert ezesetben az időszak rövidebb is lehet. (Hibakód=&lt;B014&gt;)</Msg>
+        </Message>
+        <Message id="21" msgLevel="error">
+            <CalcId>137</CalcId>
+            <Msg>Vizsgálja felül a bevallási időszaka végét, mivel az egy jövőbeni dátum, így hibás. Javítsa bevallási időszakát! (Hibakód=&lt;1042146/B017&gt;)</Msg>
+        </Message>
+        <Message id="22" msgLevel="warning">
+            <CalcId>92</CalcId>
+            <Msg>A bevallási időszak alapesetben naptári év január 1-jétől naptári év december 31 napjáig tart, kivéve ha az adózó soron kívüli bevallást nyújt be vagy évközben kezdte meg tevékenységét. (Hibakód=&lt;B005&gt;)</Msg>
+        </Message>
+        <Message id="23" msgLevel="fatalerror">
+            <CalcId>6</CalcId>
+            <Msg>Bevallás jellege kizárólag "üres érték"=alapbevallás és O=önellenőrzés lehet! Kérem javítsa bejelentését! (Hibakód=&lt;1039667/B001&gt;)</Msg>
+        </Message>
+        <Message id="24" msgLevel="error">
+            <CalcId>47</CalcId>
+            <Msg>Ha az önellenőrzési mezőcsoportban az ismételt önellenőrzés mező kitöltött, akkor a bevallás jellege mező értéke O (önellenőrzés). (Hibakód=&lt;o010&gt;)</Msg>
+        </Message>
+        <Message id="25" msgLevel="fatalerror">
+            <CalcId>10</CalcId>
+            <CalcId>9</CalcId>
+            <Msg>Ha a bevallás típus kényszertörlés, felszámolási eljárás vagy végelszámolás, akkor a bevallás fajtájának is kitöltöttnek kell lennie és fordítva. Kérem javítsa bejelentését. (Hibakód=&lt;1039668/B004&gt;)</Msg>
+        </Message>
+        <Message id="26" msgLevel="error">
+            <CalcId>50</CalcId>
+            <Msg>Egyéni vállalkozó adózónál a bevallás típusa mező értéke csak A (átalakulás), E (egyéni vállalkozói megszűnés), H (feltételek hiánya az adóalanyiság alatt), S (egyéni vállalkozói, ügyvédi, szabadalmi ügyvivői, közjegyzői tevékenység szüneteltetése), vagy üres lehet és a bevallás fajtája mező nem lehet kitöltött. (Hibakód=&lt;1033468/x025&gt;)</Msg>
+        </Message>
+        <Message id="27" msgLevel="error">
+            <CalcId>51</CalcId>
+            <Msg>Ha a Bevallás fajtája mező kitöltött, akkor a Bevallás típusa mezőnek is kitöltöttnek kell lenni. (Hibakód=&lt;1033472/x040&gt;)</Msg>
+        </Message>
+        <Message id="28" msgLevel="error">
+            <CalcId>52</CalcId>
+            <CalcId>53</CalcId>
+            <Msg>Ha csak az adózóazonosító jel van kitöltve, akkor a bevallás típusa és fajtája kódkocka nem tölthető ki.  (Hibakód=&lt;1033475/x043&gt;)</Msg>
+        </Message>
+        <Message id="29" msgLevel="warning">
+            <CalcId>93</CalcId>
+            <Msg>Tájékoztatom, hogy a NAV soron kívüli bevallás, vagy speciális adózási helyzet miatt tett bevallás esetén egyösszegben kötelezheti a felügyeleti díj megfizetésére. (Hibakód=&lt;1039680/B003&gt;)</Msg>
+        </Message>
+        <Message id="30" msgLevel="error">
+            <CalcId>48</CalcId>
+            <Msg>Ha a bevallás típusa F (felszámolás), V (végelszámolás) vagy D (kényszertörlési eljárás), akkor a bevallás fajtáját is ki kell tölteni. (Hibakód=&lt;x013&gt;)</Msg>
+        </Message>
+        <Message id="31" msgLevel="error">
+            <CalcId>49</CalcId>
+            <Msg>Ha a bevallás típusa nem F (felszámolás), nem V (végelszámolás), nem D (kényszertörlési eljárás) vagy üres, akkor a bevallás fajtája nem lehet kitöltött. (Hibakód=&lt;x014&gt;)</Msg>
+        </Message>
+        <Message id="32" msgLevel="error">
+            <CalcId>54</CalcId>
+            <Msg>Ha a bevallás típusa kódkockában D (kényszertörlési eljárás) jelzés szerepel, akkor a bevallás fajtája mező értéke csak 1, vagy 2 lehet. (Hibakód=&lt;1033476/x044&gt;)</Msg>
+        </Message>
+        <Message id="33" msgLevel="fatalerror">
+            <CalcId>14</CalcId>
+            <Msg>Minden esetben meg kell adnia az adómegállapítás jogalapját. (Hibakód=&lt;1039669/B006&gt;)</Msg>
+        </Message>
+        <Message id="34" msgLevel="fatalerror">
+            <CalcId>16</CalcId>
+            <CalcId>88</CalcId>
+            <Msg>A bejelenteni kívánt jogalap hibás, figyelemmel arra, hogy az Éltv. 47/B. § (9) bek. szerinti nyilatkozatott kitöltötte, így ennek megfelelő jogalapot is kell megadnia a bevallás benyújtása során. (Hibakód=&lt;1039671/B008&gt;)</Msg>
+        </Message>
+        <Message id="35" msgLevel="fatalerror">
+            <CalcId>15</CalcId>
+            <Msg>Ha az adómegállapításának jogalapja az Éltv. 47/B. § (9) bekezdése, akkor kérem, hogy az ezzel kapcsolatos nyilatkozatot is töltse ki. (Hibakód=&lt;1039670/B007&gt;)</Msg>
+        </Message>
+        <Message id="36" msgLevel="error">
+            <CalcId>31</CalcId>
+            <CalcId>32</CalcId>
+            <CalcId>33</CalcId>
+            <CalcId>37</CalcId>
+            <Msg>Meghatalmazás, képviselet mezőcsoportban az eseti meghatalmazás csatolás, az állandó meghatalmazott, a pénzügyi képviselő és a törvényes képviselő jelölése mezők közül egyszerre csak egy lehet kitöltve. (Hibakód=&lt;h002&gt;)</Msg>
+        </Message>
+        <Message id="37" msgLevel="warning">
+            <CalcId>35</CalcId>
+            <Msg>Meghatalmazás, képviselet mezőcsoportban jelölték, hogy állandó meghatalmazottként nyújtották be a nyomtatványt. A beérkezett bizonylatok esetében az állandó meghatalmazás tényét, érvényességét a NAV vizsgálja a már bejelentett adatok alapján. (Hibakód=&lt;h008&gt;)</Msg>
+        </Message>
+        <Message id="38" msgLevel="error">
+            <CalcId>34</CalcId>
+            <Msg>Meghatalmazás, képviselet mezőcsoportban csak a Kiemelt Adó- és Vámigazgatóság (51-es igazgatósági kód) illetékességéhez tartozó adózók jelölhetik, hogy pénzügyi képviselővel rendelkeznek. (Hibakód=&lt;h007&gt;)</Msg>
+        </Message>
+        <Message id="39" msgLevel="error">
+            <CalcId>66</CalcId>
+            <CalcId>65</CalcId>
+            <CalcId>67</CalcId>
+            <CalcId>68</CalcId>
+            <Msg>Ha a meghatalmazott, képviselő neve mező kitöltött, akkor az adóazonosító szám mező kitöltése is kötelező, és ha az adóazonosító szám mező kitöltött akkor a meghatalmazott, képviselő neve mező kitöltése is kötelező.  A meghatalmazott, képviselő azonosító száma kitöltése esetén 10 vagy 11 karakter hosszú lehet, és nem lehet azonos az adózó adóazonosító jelével vagy adószámával. (Hibakód=&lt;h010&gt;)</Msg>
+        </Message>
+        <Message id="40" msgLevel="fatalerror">
+            <CalcId>89</CalcId>
+            <Msg>Ha Ön úgy nyilatkozik, hogy az általános szabályok szerint állapítja meg adóalapját, akkor az "általános szabályok szerint adómegállapítás (Éltv. 47/B. § (3) bek.)" szerint kell adóját megállapítani, egyéb jogalap (Éltv. 47/B. § (9) bek.) esetében fix összegben kerülhet sor adója megállapításra. Kérem vizsgálja felül bevallását. (Hibakód=&lt;1039686/M006&gt;)</Msg>
+        </Message>
+        <Message id="41" msgLevel="error">
+            <CalcId>135</CalcId>
+            <CalcId>136</CalcId>
+            <CalcId>134</CalcId>
+            <Msg>Ha Ön, mint termelői szerveződés vagy gazdálkodó szervezet, más adózótól átvállalja az élelmiszerlánc felügyeleti díjat, akkor nyilatkozni kell az átvállalással érintett nettó árbevétel összegéről és az átvállalással érintett adózók számáról is. (Hibakód=&lt;1040210/M014&gt;)</Msg>
+        </Message>
+        <Message id="42" msgLevel="error">
+            <CalcId>116</CalcId>
+            <Msg>Ha Ön úgy nyilatkozik, hogy termelő szerveződés tagjaként vagy termelői szerveződésként átvállalással érintett, akkor is köteles az általános szabályok szerint felügyeleti díj alapját képező nettó árbevételről nyilatkozni. (Hibakód=&lt;1040207/M009&gt;)</Msg>
+        </Message>
+        <Message id="43" msgLevel="warning">
+            <CalcId>130</CalcId>
+            <CalcId>129</CalcId>
+            <Msg>Az átvállalói nyilatkozat és az átvállalással kapcsolatos nyilatkozat együttes kitöltése főszabály szerint nem szükséges. Kérjük vizsgálja felül, hogy egy bevallási időszakon belül valóban egyszerre kíván-e átvállalóként nyilatkozni, mivel mástól átvállal fizetési kötelezettséget, és átvállalással kapcsolatos nyilatkozatot is kíván kitöltetni, mivel Öntől is átvállalnak felügyeleti díj bevallási és fizetési kötelezettséget. (Hibakód=&lt;1042227/M013&gt;)</Msg>
+        </Message>
+        <Message id="44" msgLevel="error">
+            <CalcId>126</CalcId>
+            <CalcId>127</CalcId>
+            <Msg>Ha Ön, mint termelői szerveződés vagy gazdálkodó szervezet, más adózótól átvállalja az élelmiszerlánc felügyeleti díj bevallását és megfizetését, akkor a saját tevékenysége utáni nettó árbevételről és az átvállalt nettó árbevételről is nyilatkoznia kell. A saját és átvállalt nettó árbevétel összegének meg kell egyeznie az élelmiszerlánc felügyeleti díj alapját képező általános szabályok szerint megállapított nettó árbevétel összegével. (Hibakód=&lt;1040209/M012&gt;)</Msg>
+        </Message>
+        <Message id="45" msgLevel="error">
+            <CalcId>132</CalcId>
+            <CalcId>132</CalcId>
+            <CalcId>132</CalcId>
+            <CalcId>117</CalcId>
+            <CalcId>131</CalcId>
+            <CalcId>131</CalcId>
+            <CalcId>131</CalcId>
+            <CalcId>131</CalcId>
+            <CalcId>131</CalcId>
+            <CalcId>132</CalcId>
+            <CalcId>132</CalcId>
+            <Msg>Ha úgy nyilatkozik, hogy Öntől, mint termelői szerveződés tagjától vagy termelői szerveződéstől másik adózó vagy más adózók átvállalták felügyeleti díj bevallását és megfizetését, akkor köteles nyilatkozni az átvállaló adószámáról és az általa átvállalt összegről. (Hibakód=&lt;1039891/M010&gt;)</Msg>
+        </Message>
+        <Message id="46" msgLevel="error">
+            <CalcId>103</CalcId>
+            <CalcId>105</CalcId>
+            <CalcId>106</CalcId>
+            <CalcId>107</CalcId>
+            <CalcId>76</CalcId>
+            <CalcId>77</CalcId>
+            <CalcId>78</CalcId>
+            <CalcId>80</CalcId>
+            <CalcId>81</CalcId>
+            <CalcId>82</CalcId>
+            <CalcId>83</CalcId>
+            <CalcId>84</CalcId>
+            <CalcId>85</CalcId>
+            <CalcId>86</CalcId>
+            <Msg>Kitöltési hiba az önellenőrzés során megadott összegekben. (Hibakód=&lt;1039692/O007&gt;)</Msg>
+        </Message>
+        <Message id="47" msgLevel="error">
+            <CalcId>5</CalcId>
+            <Msg>Futtassa a számított mezők újraszámítását! (Hibakód=&lt;1082926/w010&gt;)</Msg>
+        </Message>
+        <Message id="48" msgLevel="warning">
+            <CalcId>21</CalcId>
+            <CalcId>22</CalcId>
+            <Msg>A nyilatkozat alapján a megállapított adó összege fix. (Hibakód=&lt;1039683/M002&gt;)</Msg>
+        </Message>
+        <Message id="49" msgLevel="error">
+            <CalcId>23</CalcId>
+            <CalcId>24</CalcId>
+            <CalcId>25</CalcId>
+            <Msg>.Hibás a megállapított adó, kérem javítsa! (Hibakód=&lt;1039684/M003&gt;)</Msg>
+        </Message>
+        <Message id="50" msgLevel="error">
+            <CalcId>94</CalcId>
+            <Msg>Kizárólag 421-es vagy 215-ös adónemkód adható meg a bevallás benyújtása során, kérjük javítsa bevallását! (Hibakód=&lt;O008&gt;)</Msg>
+        </Message>
+        <Message id="51" msgLevel="error">
+            <CalcId>108</CalcId>
+            <CalcId>111</CalcId>
+            <Msg>Kitöltési hiba az önellenőrzés során megadott összegekben. (Hibakód=&lt;1039695/O010&gt;)</Msg>
+        </Message>
+        <Message id="52" msgLevel="warning">
+            <CalcId>112</CalcId>
+            <CalcId>113</CalcId>
+            <CalcId>114</CalcId>
+            <CalcId>115</CalcId>
+            <Msg>A bevallás alapján fizetendő / visszaigényelhető adója keletkezett. Kérem ellenőrizze! (Hibakód=&lt;1039677/M008&gt;)</Msg>
+        </Message>
+        <Message id="53" msgLevel="warning">
+            <CalcId>100007</CalcId>
+            <CalcId>100008</CalcId>
+            <CalcId>100009</CalcId>
+            <CalcId>100011</CalcId>
+            <CalcId>100010</CalcId>
+            <Msg>Ellenőrizze, hogy valóban ezer forintban adta meg az adatot! (Hibakód=&lt;m005&gt;)</Msg>
+        </Message>
+        <SearchFieldGroupId>120002</SearchFieldGroupId>
+        <SearchFieldGroupId>120003</SearchFieldGroupId>
+        <SearchFieldGroupId>120007</SearchFieldGroupId>
+        <SearchFieldGroupId>120006</SearchFieldGroupId>
+        <SearchFieldGroupId>120023</SearchFieldGroupId>
+        <SearchFieldGroupId>120027</SearchFieldGroupId>
+        <SearchFieldGroupId>120029</SearchFieldGroupId>
+        <SearchFieldGroupId>120034</SearchFieldGroupId>
+        <SearchFieldGroupId>120035</SearchFieldGroupId>
+        <SearchFieldGroupId>120057</SearchFieldGroupId>
+        <SearchFieldGroupId>120057</SearchFieldGroupId>
+        <SearchFieldGroupId>120057</SearchFieldGroupId>
+        <SearchFieldGroupId>120057</SearchFieldGroupId>
+        <SearchFieldGroupId>120057</SearchFieldGroupId>
+        <ValuesList id="440999338" index="1">
+            <List>O=Önellenőrzés</List>
+            <Value>O</Value>
+        </ValuesList>
+        <ValuesList id="1894323038" index="2">
+            <List>1=Éltv. 47/B. § (3) bek.</List>
+            <List>2=Éltv. 47/B. § (9) bek.</List>
+            <Value>1</Value>
+            <Value>2</Value>
+        </ValuesList>
+        <ValuesList id="766067253" index="3">
+            <List>A=átalakulás, ideértve a társasági formaváltást az egyesülést (összeolvadás, beolvadás) és a szétválást (különválás, kiválás, leválás), azaz jogutóddal való megszűnés</List>
+            <List>B=EU más tagállamában illetőséggel bíró gazdasági társaságba történő beolvadás esetén</List>
+            <List>E=egyéni vállalkozói minőség megszűnése</List>
+            <List>K=közhatalmat gyakorló adóalany megszűnése</List>
+            <List>M=Egyéb megszűnés jogutód nélküli megszűnés esetében, illetve kényszertörlési eljárással megszűnt adózóknál a megszűnés kapcsán benyújtott bevallás</List>
+            <List>D=Kényszertörlési eljárás esetén</List>
+            <List>F=Felszámolás esetén</List>
+            <List>V=végelszámolás, egyszerűsített végelszámolás</List>
+            <Value>A</Value>
+            <Value>B</Value>
+            <Value>E</Value>
+            <Value>K</Value>
+            <Value>M</Value>
+            <Value>D</Value>
+            <Value>F</Value>
+            <Value>V</Value>
+        </ValuesList>
+        <ValuesList id="-1225400089" index="4">
+            <List>1=eljárás előtt</List>
+            <List>2=eljárás alatt</List>
+            <List>3=eljárás zárása</List>
+            <Value>1</Value>
+            <Value>2</Value>
+            <Value>3</Value>
+        </ValuesList>
+        <ValuesList id="1266449933" index="5">
+            <List>1=mikrovállalkozás/kistermelő</List>
+            <List>2=kisvállalkozás</List>
+            <Value>1</Value>
+            <Value>2</Value>
+        </ValuesList>
+        <ValuesList id="38659652" index="6">
+            <List>215=NAV Bírság, mulasztási bírság és önellenőrzéssel kapcsolatos befizetések bevételi számla - önellenőrzési pótlék 215</List>
+            <List>421=NAV Élelmiszerlánc felügyeleti díj bevételi számla</List>
+            <Value>215</Value>
+            <Value>421</Value>
+        </ValuesList>
+    </Form>
+</WebUIModel>
